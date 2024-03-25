@@ -1,0 +1,16 @@
+<!DOCTYPE htm1l>
+<html Lang="ru">
+  <head>
+    <meta charset="utf-8" /> 
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" /> 
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h1 class="text-monospace text-center">Стихотворение</h1>
+    <p class="row">
+      {% for line in poem %}
+        <span class="text-black-50 col-12 col-md-6">{{ line }}</span><br/>
+      {% endfor %}
+    </p>
+  </body>
+</html>
