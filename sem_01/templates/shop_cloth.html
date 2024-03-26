@@ -1,0 +1,34 @@
+{% extends 'shop_base.html' %}
+
+{% block title %}
+  {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="text-center">Clothes Shop</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2 class="text-center">Shop by Category</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h3 class="text-center"><a href="/shop_cloth/">Clothes</a></h3>
+            </li>
+            <li class="list-group-item">
+                <h3 class="text-center"><a href="/shop_shoes/">Shoes</a></h3>
+            </li>
+            <li class="list-group-item">
+                <h3 class="text-center"><a href="/shop_jacket/">Jacket</a></h3>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+{% endblock %}

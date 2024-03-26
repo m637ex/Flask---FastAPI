@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %} 
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <h2 class="text-center">Последние новости. </h2>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-12">
+          <ul class="list-group">
+              {% for post in posts %}
+                <li class="list-group-item">
+                    <h3 class="text-center">{{ post.title }}</h3>
+                    <p class="text-center">{{ post.news }}</p>
+                    <p class="text-right">{{ post.date }}</p>
+                </li>
+              {% endfor %}
+          </ul>
+      </div>
+  </div>
+</div>
+{% endblock %}
