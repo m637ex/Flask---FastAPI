@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <h1 class="col-12 col-md-10 display-2">Список студентов:</h1>
+    {% for student in students %}
+      <p class="col-12 col-md-6">
+        Имя студента: {{ student.firstname }} {{ student.lastname }}<br />
+        Группа: {{ student.group }}<br />
+        Факультет: {{ student.faculty }}<br />
+        Пол: {{ student.gender }}<br />
+        Возраст: {{ student.age }}<br />
+      </p>
+    {% endfor %}
+  </div>
+{% endblock %}
