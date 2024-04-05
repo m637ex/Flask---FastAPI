@@ -1,6 +1,8 @@
 from flask import Flask
+# pip install flask_wtf
 from flask_wtf import FlaskForm # обеспечивает валидацию форм
-from wtforms import StringField, PasswordField, DateField, SubmitField # прверки полей формы
+from wtforms import StringField, PasswordField, DateField, BooleanField # прверки полей формы
+# pip install email validator
 from wtforms.validators import DataRequired, Email, EqualTo, Length # Валидация данных формы
 
 from flask_wtf.csrf import CSRFProtect  # защиты от CSRF-атак
@@ -34,9 +36,10 @@ class LoginForm(FlaskForm): # каждый класс форм наследуе�
 class RegistrationForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()]) # строковое поле, email
-    password = PasswordField('Password', validators=[DataRequired(), Length(min=6)]) # поле арроль  длиной мин 6 символов
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=8)]) # поле арроль  длиной мин 6 символов
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')]) # EqualTo - как passwords выше
     birthday = DateField('Birthday', validators=[DataRequired()])
+    submit = BooleanField('Submit', validators=[DataRequired()])
 
 
 if __name__ == '__main__': 

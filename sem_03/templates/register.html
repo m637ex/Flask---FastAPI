@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Login</h1>
+  <h1>Register</h1>
   <form method="POST" action="{{ url_for('register') }}">
     {{ form.csrf_token }} <!-- Пробрасываем токен -->
     {% for field in form if field.name != 'csrf_token' %} <!-- перебераем все поля, генерируем форму -->
