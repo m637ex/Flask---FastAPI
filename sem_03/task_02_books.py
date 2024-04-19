@@ -10,7 +10,8 @@
 from flask import Flask
 from sem_03.models_02_books import db, Book, Author
 from random import randint
-from flask import render_template # pip install faker
+from flask import render_template 
+# pip install faker
 from faker import Faker # Faker - это библиотека для генерации случайных данных на различных языках программирования
 fake = Faker()
 
